@@ -57,7 +57,6 @@ public class HelloWorld{
             }
         }
 
-        // Output the result
         if (isPrime) {
             System.out.println(number + " is a Prime Number.");
         } else {
