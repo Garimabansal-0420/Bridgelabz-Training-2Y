@@ -111,6 +111,106 @@ public class HelloWorld{
 
         System.out.println("The number of digits in " + originalNumber + " is: " + count);
 
+        
+        //que7
+
+        double weight = scanner.nextDouble();
+
+        System.out.print("Enter your height in centimeters (cm): ");
+        double heightCm = scanner.nextDouble();
+
+        double heightM = heightCm / 100;
+
+        double bmi = weight / (heightM * heightM);
+
+        System.out.printf("Your BMI is: %.2f\n", bmi);
+
+        if (bmi < 18.5) {
+            System.out.println("You are Underweight.");
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            System.out.println("You have Normal weight.");
+        } else if (bmi >= 25 && bmi < 29.9) {
+            System.out.println("You are Overweight.");
+        } else {
+            System.out.println("You are Obese.");
+        }
+
+
+        //que8
+
+        int number = scanner.nextInt();
+
+        int sum = 0;
+
+        int originalNumber = number;
+        while (number != 0) {
+            int digit = number % 10;
+            sum += digit;
+            number = number / 10;
+        }
+
+        if (originalNumber % sum == 0) {
+            System.out.println(originalNumber + " is a Harshad Number.");
+        } else {
+            System.out.println(originalNumber + " is NOT a Harshad Number.");
+        }
+
+
+        //que9
+
+        int number = scanner.nextInt();
+
+        int sum = 0;
+
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+        }
+
+        if (sum > number) {
+            System.out.println(number + " is an Abundant Number.");
+        } else {
+            System.out.println(number + " is NOT an Abundant Number.");
+        }
+
+
+        //que10
+
+        double first, second;
+        String op;
+
+        System.out.print("Enter the first number: ");
+        first = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        second = scanner.nextDouble();
+
+        System.out.print("Enter an operator (+, -, *, /): ");
+        op = scanner.next();
+
+        switch (op) {
+            case "+":
+                System.out.println("Result: " + (first + second));
+                break;
+            case "-":
+                System.out.println("Result: " + (first - second));
+                break;
+            case "*":
+                System.out.println("Result: " + (first * second));
+                break;
+            case "/":
+                if (second == 0) {
+                    System.out.println("Error: Division by zero is not allowed.");
+                } else {
+                    System.out.println("Result: " + (first / second));
+                }
+                break;
+            default:
+                System.out.println("Invalid Operator.");
+        }*/
+
+
     }
 }
 
