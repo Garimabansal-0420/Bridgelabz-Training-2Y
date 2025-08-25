@@ -1,0 +1,291 @@
+// public class flow2{
+//         public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+
+//         System.out.print("Enter a natural number: ");
+//         int number = input.nextInt();
+
+//         if (number <= 0) {
+//             System.out.println("Please enter a positive natural number.");
+//         } else {
+//             for (int i = 1; i <= number; i++) {
+//                 if (i % 2 == 0) {
+//                     System.out.println(i + " is an Even number");
+//                 } else {
+//                     System.out.println(i + " is an Odd number");
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+// import java.util.Scanner;
+// class employeebonus{
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+
+    
+//         System.out.print("Enter your salary: ");
+//         double salary = input.nextDouble();
+
+//         System.out.print("Enter your years of service: ");
+//         int years = input.nextInt();
+
+//         if (years > 5) {
+//             double bonus = salary * 0.05;
+//             System.out.println("You are eligible for a bonus of: " + bonus);
+//         } else {
+//             System.out.println("No bonus. Service must be more than 5 years.");
+//         }
+//     }
+// }
+
+// import java.util.Scanner;
+// class multiply {
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter a number: ");
+//         int number = input.nextInt();
+
+//         System.out.println("Multiplication table of " + number + " from 6 to 9:");
+//         for (int i = 6; i <= 9; i++) {
+//             System.out.println(number + " * " + i + " = " + (number * i));
+//         }
+//     }
+// }
+
+// import java.util.Scanner;
+// class fizzbuzzer{
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         int number = input.nextInt();
+//         if (number <= 0) {
+//             System.out.println("Please enter a positive integer.");
+//         } else {
+//             for (int i = 1; i <= number; i++) {
+//                 if (i % 3 == 0 && i % 5 == 0) {
+//                     System.out.println("FizzBuzz");
+//                 } else if (i % 3 == 0) {
+//                     System.out.println("Fizz");
+//                 } else if (i % 5 == 0) {
+//                     System.out.println("Buzz");
+//                 } else {
+//                     System.out.println(i);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// import java.util.Scanner;
+// class fizzbuzzer{
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter a positive integer: ");
+//         int number = input.nextInt();
+
+//         if (number <= 0) {
+//             System.out.println("Please enter a positive integer.");
+//         } else {
+//             while (int i <= number) {
+//                 if (i % 3 == 0 && i % 5 == 0) {
+//                     System.out.println("FizzBuzz");
+//                 } else if (i % 3 == 0) {
+//                     System.out.println("Fizz");
+//                 } else if (i % 5 == 0) {
+//                     System.out.println("Buzz");
+//                 } else {
+//                     System.out.println(i);
+//                 }
+//                 i++; 
+//             }
+//         }
+//     }
+// }
+
+
+// import java.util.Scanner;
+// class ageheight {
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         int ageAmar = input.nextInt();
+//         int ageAkbar = input.nextInt();
+//         int ageAnthony = input.nextInt();
+//         System.out.print("Enter Amar's height (in cm): ");
+//         int heightAmar = input.nextInt();
+//         System.out.print("Enter Akbar's height (in cm): ");
+//         int heightAkbar = input.nextInt();
+//         System.out.print("Enter Anthony's height (in cm): ");
+//         int heightAnthony = input.nextInt();
+//         if (ageAmar < ageAkbar && ageAmar < ageAnthony) {
+//             System.out.println("The youngest is Amar with age " + ageAmar);
+//         } else if (ageAkbar < ageAmar && ageAkbar < ageAnthony) {
+//             System.out.println("The youngest is Akbar with age " + ageAkbar);
+//         } else if (ageAnthony < ageAmar && ageAnthony < ageAkbar) {
+//             System.out.println("The youngest is Anthony with age " + ageAnthony);
+//         } else {
+//             System.out.println("Two or more friends have the same youngest age.");
+//         }
+//         if (heightAmar > heightAkbar && heightAmar > heightAnthony) {
+//             System.out.println("The tallest is Amar with height " + heightAmar + " cm");
+//         } else if (heightAkbar > heightAmar && heightAkbar > heightAnthony) {
+//             System.out.println("The tallest is Akbar with height " + heightAkbar + " cm");
+//         } else if (heightAnthony > heightAmar && heightAnthony > heightAkbar) {
+//             System.out.println("The tallest is Anthony with height " + heightAnthony + " cm");
+//         } else {
+//             System.out.println("Two or more friends have the same tallest height.");
+//         }
+//     }
+// }
+
+// import java.util.Scanner;
+// class factors{
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter a positive integer: ");
+//         int number = input.nextInt();
+//         if (number <= 0) {
+//             System.out.println("Please enter a positive integer.");
+//         } else {
+//             System.out.println("Factors of " + number + " are:");
+//             for (int i = 1; i <= number; i++) {
+//                 if (number % i == 0) {
+//                     System.out.println(i);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+// import java.util.Scanner;
+// class factor{
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter a positive integer: ");
+//         int number = input.nextInt();
+//         if (number <= 0) {
+//             System.out.println("Please enter a positive integer.");
+//         } else {
+//             System.out.println("Factors of " + number + " are:");
+
+//             int i = 1;
+//             while (i <= number) {
+//                 if (number % i == 0) {
+//                     System.out.println(i);
+//                 }
+//                 i++; // increment counter
+//             }
+//         }
+//     }
+// }
+
+// import java.util.Scanner;
+// class greatestfactor{
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+
+//         // Take user input
+//         System.out.print("Enter a positive integer: ");
+//         int number = input.nextInt();
+
+//         if (number <= 1) {
+//             System.out.println("Please enter an integer greater than 1.");
+//         } else {
+//             int greatestFactor = 1;   
+//             int counter = number - 1;  
+
+//             while (counter >= 1) {
+//                 if (number % counter == 0) {
+//                     greatestFactor = counter;
+//                     break;
+//                 }
+//                 counter--;
+//             }
+
+//             System.out.println("Greatest factor of " + number + " (besides itself) is: " + greatestFactor);
+//         }
+//     }
+// }
+
+// import java.util.Scanner;
+// class multiples{
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter a positive integer less than 100: ");
+//         int number = input.nextInt();
+//         if (number <= 0 || number >= 100) {
+//             System.out.println("Please enter a positive integer less than 100.");
+//         } else {
+//             System.out.println("Multiples of " + number + " below 100 are:");
+//             for (int i = 100; i >= 1; i--) {
+//                 if (i % number == 0) {
+//                     System.out.println(i);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// import java.util.Scanner;
+// class power{
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter the base number: ");
+//         int number = input.nextInt();
+
+//         System.out.print("Enter the power (exponent): ");
+//         int power = input.nextInt();
+//         if (number < 0 || power < 0) {
+//             System.out.println("Please enter positive integers only.");
+//         } else {
+//             int result = 1;
+//             for (int i = 1; i <= power; i++) {
+//                 result *= number;
+//             }
+
+//             System.out.println(number + " raised to the power " + power + " is: " + result);
+//         }
+//     }
+// }
+
+// import java.util.Scanner;
+// class {
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter a positive integer less than 100: ");
+//         int number = input.nextInt();
+//         if (number <= 0 || number >= 100) {
+//             System.out.println("Please enter a positive integer less than 100.");
+//         } else {
+//             int counter = 1;
+
+//             System.out.println("Multiples of " + number + " below 100 are:");
+//             while (number * counter < 100) {
+//                 System.out.println(number * counter);
+//                 counter++;
+//             }
+//         }
+//     }
+// }
+
+// import java.util.Scanner;
+// class power {
+//     public static void main(String[] args) {
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter the base number: ");
+//         int number = input.nextInt();
+
+//         System.out.print("Enter the power: ");
+//         int power = input.nextInt();
+
+//         int result = 1;  
+//         int counter = 0;   
+//         while (counter < power) {
+//             result = result * number; // multiply result by number
+//             counter++; // increment counter
+//         }
+//         System.out.println(number + " raised to the power " + power + " = " + result);
+//     }
+// }
