@@ -1,0 +1,117 @@
+import java.util.Scanner;
+
+public class HelloWorld{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        //que1
+       /* System.out.print("Enter a year (>= 1582): ");
+        int year = scanner.nextInt();
+
+        if (year < 1582) {
+            System.out.println("The year must be greater than or equal to 1582.");
+        } else {
+            if (year % 4 != 0) {
+                System.out.println(year + " is NOT a Leap Year.");
+            } else {
+                if (year % 100 != 0) {
+                    System.out.println(year + " is a Leap Year.");
+                } else {
+                    if (year % 400 == 0) {
+                        System.out.println(year + " is a Leap Year.");
+                    } else {
+                        System.out.println(year + " is NOT a Leap Year.");
+                    }
+                }
+            }
+        }
+
+
+
+        //que2
+        if (year >= 1582 && ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))) {
+            System.out.println(year + " is a Leap Year.");
+        } else if (year < 1582) {
+            System.out.println("The year must be greater than or equal to 1582.");
+        } else {
+            System.out.println(year + " is NOT a Leap Year.");
+        }
+
+
+
+        //que4
+
+        int number = scanner.nextInt();
+
+        boolean isPrime = true; // Assume the number is prime initially
+
+        if (number <= 1) {
+            isPrime = false; // Prime numbers are greater than 1
+        } else {
+            for (int i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    isPrime = false; // Found a divisor other than 1 and itself
+                    break;
+                }
+            }
+        }
+
+        // Output the result
+        if (isPrime) {
+            System.out.println(number + " is a Prime Number.");
+        } else {
+            System.out.println(number + " is NOT a Prime Number.");
+        }
+
+
+        //que5
+
+        int number = scanner.nextInt();
+
+
+        int originalNumber = number; // Store the original number
+        int sum = 0; // Variable to store sum of cubes of digits
+
+
+        while (originalNumber != 0) {
+
+            int digit = originalNumber % 10;
+
+            sum += digit * digit * digit;
+
+            originalNumber = originalNumber / 10;
+        }
+
+        if (sum == number) {
+            System.out.println(number + " is an Armstrong Number.");
+        } else {
+            System.out.println(number + " is NOT an Armstrong Number.");
+        }*/
+
+
+        //que6
+
+        int number = scanner.nextInt();
+
+        int count = 0;
+
+        int originalNumber = number;
+        number = Math.abs(number);
+
+        if (number == 0) {
+            count = 1;
+        } else {
+            while (number != 0) {
+                // Step 4: Remove last digit
+                number = number / 10;
+
+                count++;
+            }
+        }
+
+        System.out.println("The number of digits in " + originalNumber + " is: " + count);
+
+    }
+}
+
