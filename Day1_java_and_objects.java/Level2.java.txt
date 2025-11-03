@@ -1,0 +1,294 @@
+class BankAccount {
+    String accountHolder;
+    int accountNumber;
+    double balance;
+
+    BankAccount(String accountHolder, int accountNumber, double balance) {
+        this.accountHolder = accountHolder;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
+    void deposit(double amount) {
+        balance += amount;
+        System.out.println("Deposited: " + amount);
+    }
+
+    void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+            System.out.println("Withdrawn: " + amount);
+        } else {
+            System.out.println("Insufficient Balance!");
+        }
+    }
+
+    void displayBalance() {
+        System.out.println("Account Holder: " + accountHolder);
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Balance: " + balance);
+    }
+
+    public static void main(String[] args) {
+        BankAccount acc1 = new BankAccount("Rohit", 12345, 10000);
+        acc1.deposit(5000);
+        acc1.withdraw(3000);
+        acc1.displayBalance();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+class Book {
+    String title;
+    String author;
+    double price;
+
+    // Default Constructor
+    Book() {
+        title = "Unknown";
+        author = "Unknown";
+        price = 0.0;
+    }
+
+    // Parameterized Constructor
+    Book(String title, String author, double price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+
+    void display() {
+        System.out.println("Title: " + title + ", Author: " + author + ", Price: " + price);
+    }
+
+    public static void main(String[] args) {
+        Book b1 = new Book(); // default
+        Book b2 = new Book("Java Programming", "James Gosling", 499.99); // parameterized
+        b1.display();
+        b2.display();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+class CarRental {
+    String customerName;
+    String carModel;
+    int rentalDays;
+    double dailyRate = 1000; // Example fixed rate
+
+    // Default Constructor
+    CarRental() {
+        customerName = "Unknown";
+        carModel = "Standard";
+        rentalDays = 1;
+    }
+
+    // Parameterized Constructor
+    CarRental(String customerName, String carModel, int rentalDays) {
+        this.customerName = customerName;
+        this.carModel = carModel;
+        this.rentalDays = rentalDays;
+    }
+
+    double calculateTotalCost() {
+        return rentalDays * dailyRate;
+    }
+
+    void display() {
+        System.out.println("Customer: " + customerName + 
+                           ", Car: " + carModel + 
+                           ", Days: " + rentalDays + 
+                           ", Total Cost: " + calculateTotalCost());
+    }
+
+    public static void main(String[] args) {
+        CarRental r1 = new CarRental(); // default
+        CarRental r2 = new CarRental("Neha", "SUV", 5); // parameterized
+        r1.display();
+        r2.display();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+import java.util.ArrayList;
+
+class CartItem {
+    String itemName;
+    double price;
+    int quantity;
+
+    CartItem(String itemName, double price, int quantity) {
+        this.itemName = itemName;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    double getTotalCost() {
+        return price * quantity;
+    }
+}
+
+class ShoppingCart {
+    ArrayList<CartItem> cart = new ArrayList<>();
+
+    void addItem(CartItem item) {
+        cart.add(item);
+        System.out.println(item.itemName + " added to cart.");
+    }
+
+    void removeItem(String itemName) {
+        cart.removeIf(item -> item.itemName.equalsIgnoreCase(itemName));
+        System.out.println(itemName + " removed from cart.");
+    }
+
+    void displayTotal() {
+        double total = 0;
+        for (CartItem item : cart) {
+            total += item.getTotalCost();
+        }
+        System.out.println("Total Cart Cost: " + total);
+    }
+
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+        cart.addItem(new CartItem("Shirt", 1200, 2));
+        cart.addItem(new CartItem("Jeans", 2000, 1));
+        cart.displayTotal();
+        cart.removeItem("Shirt");
+        cart.displayTotal();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+class MovieTicket {
+    String movieName;
+    int seatNumber;
+    double price;
+
+    void bookTicket(String movieName, int seatNumber, double price) {
+        this.movieName = movieName;
+        this.seatNumber = seatNumber;
+        this.price = price;
+        System.out.println("Ticket booked successfully!");
+    }
+
+    void displayTicket() {
+        System.out.println("Movie: " + movieName);
+        System.out.println("Seat No: " + seatNumber);
+        System.out.println("Price: " + price);
+    }
+
+    public static void main(String[] args) {
+        MovieTicket t1 = new MovieTicket();
+        t1.bookTicket("Avengers: Endgame", 12, 250);
+        t1.displayTicket();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+class PalindromeChecker {
+    String text;
+
+    PalindromeChecker(String text) {
+        this.text = text;
+    }
+
+    boolean isPalindrome() {
+        String reversed = new StringBuilder(text).reverse().toString();
+        return text.equalsIgnoreCase(reversed);
+    }
+
+    void displayResult() {
+        if (isPalindrome())
+            System.out.println(text + " is a Palindrome.");
+        else
+            System.out.println(text + " is NOT a Palindrome.");
+    }
+
+    public static void main(String[] args) {
+        PalindromeChecker p1 = new PalindromeChecker("madam");
+        p1.displayResult();
+    }
+}
+
+
+
+
+
+
+
+
+class Student {
+    String name;
+    int rollNumber;
+    int marks;
+
+    Student(String name, int rollNumber, int marks) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.marks = marks;
+    }
+
+    char calculateGrade() {
+        if (marks >= 90) return 'A';
+        else if (marks >= 75) return 'B';
+        else if (marks >= 50) return 'C';
+        else return 'F';
+    }
+
+    void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll No: " + rollNumber);
+        System.out.println("Marks: " + marks);
+        System.out.println("Grade: " + calculateGrade());
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student("Anjali", 101, 88);
+        s1.displayDetails();
+    }
+}
